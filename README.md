@@ -48,120 +48,120 @@
 
 ---
 
-# Spring Boot Main Annotations:
+## Spring Boot Main Annotations:
 ### @SpringBootApplication:
 - This annotation is a combination of `@Configuration`, `@EnableAutoConfiguration`, and `@ComponentScan`.
 - It marks the main class of a Spring Boot application, providing configuration, enabling auto-configuration, and specifying the base package for component scanning.
 
-## @ComponentScan:
+### @ComponentScan:
 - Scans the specified package for Spring components (like beans, controllers, services) and registers them in the application context.
 - It can be used at the class level to specify the base package for scanning.
 
-## @EnableAutoConfiguration:
+### @EnableAutoConfiguration:
 - Enables Spring Boot's automatic configuration based on the project's dependencies.
 - It attempts to guess and configure beans based on the classpath.
 
-## @Configuration:
+### @Configuration:
 - Indicates that a class declares one or more `@Bean` methods and may be processed by the Spring container to generate bean definitions and service requests for those beans.
 
 # Stereotype Annotations:
-## @Component:
+### @Component:
 - Indicates that a class is a Spring component.
 - Such classes are automatically detected and registered as beans during component scanning.
 
-## @Service:
+### @Service:
 - Specialized version of `@Component` used to indicate that a class is a service.
 
-## @RestController / @Controller:
+### @RestController / @Controller:
 - Marks a class as a controller in Spring MVC.
 - `@RestController` is a specialized version of `@Controller` that combines `@Controller` and `@ResponseBody`.
 
-## @Repository:
+### @Repository:
 - Indicates that a class is a repository, typically used for database access.
 - It is a specialization of `@Component`.
 
-# Spring Core Related Annotations:
-## @Configuration:
+## Spring Core Related Annotations:
+### @Configuration:
 - Indicates that a class declares one or more `@Bean` methods and may be processed by the Spring container to generate bean definitions and service requests for those beans.
 
-## @Bean:
+### @Bean:
 - Indicates that a method produces a bean to be managed by the Spring container.
 - It is used in conjunction with `@Configuration`.
 
-## @Autowired:
+### @Autowired:
 - Marks a constructor, field, method, or parameter to be autowired by Spring's dependency injection facilities.
 
-## @Qualifier:
+### @Qualifier:
 - Used in conjunction with `@Autowired` to specify the name of the bean to be injected when there are multiple candidates.
 
-## @Lazy:
+### @Lazy:
 - Delays the initialization of a bean until it is first requested.
 
-## @Value:
+### @Value:
 - Injects values into fields in a Spring bean.
 
-## @PropertySource:
+### @PropertySource:
 - Declares a property source to be added to the Environment's set of property sources.
 
-## @ConfigurationProperties:
+### @ConfigurationProperties:
 - Binds and validates external configuration properties to a class.
 
-## @Profile:
+### @Profile:
 - Specifies which beans should be registered based on the active profiles.
 
-## @Scope:
+### @Scope:
 - Defines the scope of a bean (e.g., singleton, prototype).
 
-# REST API Related Annotations:
-## @RestController:
+## REST API Related Annotations:
+### @RestController:
 - A specialized version of `@Controller` that is a convenient annotation for creating RESTful controllers.
 
-## @RequestMapping:
+### @RequestMapping:
 - Maps HTTP requests to handler methods.
 
-## @GetMapping, @PostMapping, @PutMapping, @DeleteMapping:
+### @GetMapping, @PostMapping, @PutMapping, @DeleteMapping:
 - Shortcut annotations for `@RequestMapping(method = RequestMethod.GET/POST/PUT/DELETE)`.
 
-## @RequestBody:
+### @RequestBody:
 - Indicates that a method parameter should be bound to the body of the web request.
 
-## @PathVariable:
+### @PathVariable:
 - Extracts values from the URI template and binds them to method parameters.
 
-## @RequestParam:
+### @RequestParam:
 - Binds a web request parameter to a method parameter.
 
-## @ControllerAdvice & @ExceptionHandler:
+### @ControllerAdvice & @ExceptionHandler:
 - Used together to define global exception handlers for controllers.
 
-# Spring Data JPA Related Annotations:
-## @Entity:
+## Spring Data JPA Related Annotations:
+### @Entity:
 - Marks a class as a JPA entity.
 
-## @Table:
+### @Table:
 - Specifies the primary table for the annotated entity.
 
-## @Column:
+### @Column:
 - Used to define the properties of the column in a database table.
 
-## @Transactional:
+### @Transactional:
 - Defines the scope of a single database transaction.
 
-## @OneToOne, @OneToMany, @ManyToOne, @ManyToMany:
+### @OneToOne, @OneToMany, @ManyToOne, @ManyToMany:
 - Define the relationships between entities in JPA.
 
-# Caching Related Annotations:
-## @Cacheable:
+## Caching Related Annotations:
+### @Cacheable:
 - Indicates that the result of a method should be cached.
 
-## @CachePut:
+### @CachePut:
 - Updates the cache with the result of the method execution.
 
-## @CacheEvict:
+### @CacheEvict:
 - Evicts one or more entries from the cache.
 
-## @CacheConfig:
+### @CacheConfig:
 - Shares some common cache-related settings at the class level.
 
-## @EnableCaching:
+### @EnableCaching:
 - Enables Spring's annotation-driven cache management.
