@@ -45,6 +45,13 @@
    - [**@CacheEvict**](#cacheevict)
    - [**@CacheConfig**](#cacheconfig)
    - [**@EnableCaching**](#enablecaching)
+  
+7. [Thread Related Annotations](#caching-related-annotations)
+   - [**@Async**](#async)
+   - [**@Scheduled**](#scheduled)
+   - [**@EnableAsync**](#enableAsync)
+   - [**@EnableScheduling**](#enablescheduling)
+   - [**@ThreadScope**](#threadscope)
 
 ---
 
@@ -165,3 +172,82 @@
 
 ### @EnableCaching:
 - Enables Spring's annotation-driven cache management.
+
+
+Here is the threading related Spring annotations summary in Markdown format for a README.md:
+
+## Threading Related Annotations
+
+### @Async:
+
+- Indicates that a method should be executed asynchronously, allowing the calling method to continue its execution without waiting for the completion of the annotated method. 
+
+- Example:
+
+```java
+@Async 
+public Future<String> asyncMethod() {
+  // Asynchronous method implementation
+}
+```
+
+### @Scheduled:
+
+- Used to schedule the execution of a method at fixed intervals or using cron expressions.
+
+- Example: 
+
+```java 
+@Scheduled(fixedRate = 5000)
+public void scheduledMethod() {
+  // Scheduled method implementation
+}
+```
+
+### @EnableAsync:
+
+- Enables Spring's asynchronous method execution capability.
+
+- It is typically used at the configuration class level.
+
+- Example:
+
+```java
+@Configuration
+@EnableAsync  
+public class AppConfig {
+  // Configuration code
+}
+```
+
+### @EnableScheduling:
+
+- Enables Spring's scheduled task execution capability.
+
+- It is typically used at the configuration class level. 
+
+- Example:
+
+```java
+@Configuration
+@EnableScheduling
+public class AppConfig {
+  // Configuration code  
+}
+```
+
+### @ThreadScope:
+
+- Defines a custom thread scope for a bean, allowing the bean to be bound to a thread.
+
+- Useful when different threads require their own instances of a bean.
+
+- Example:
+
+```java
+@Component
+@ThreadScope 
+public class ThreadScopedBean {
+  // Thread-scoped bean implementation
+}
+```
