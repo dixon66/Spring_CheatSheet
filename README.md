@@ -46,7 +46,7 @@
    - [**@CacheConfig**](#cacheconfig)
    - [**@EnableCaching**](#enablecaching)
   
-7. [Thread Related Annotations](#caching-related-annotations)
+7. [Thread Related Annotations](#thread-related-annotations)
    - [**@Async**](#async)
    - [**@Scheduled**](#scheduled)
    - [**@EnableAsync**](#enableAsync)
